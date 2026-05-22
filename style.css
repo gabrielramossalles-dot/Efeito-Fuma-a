@@ -1,0 +1,65 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+}
+
+/* ===== CONFIGURAÇÕES DA LISTA (UL) ===== */
+/* Remove margens e preenchimentos padrão que o navegador aplica à lista */
+/* Ativa flexbox para alinhar os itens da lista horizontalmente (lado a lado) */
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    transition: 2s;
+}
+
+/* ===== EFEITO AO PASSAR O MOUSE SOBRE A LISTA ===== */
+/* Quando o mouse passa sobre a lista (ul:hover), aplica efeitos em TODOS os itens (li) */
+/* rotate(45deg) - Rotaciona cada letra em 45 graus */
+/* translateY(-200px) - Move cada letra 200 pixels para cima */
+/* opacity: 0 - Torna as letras completamente transparentes (invisíveis) */
+/* filter: blur(20px) - Aplica desfoque de 20 pixels (efeito de fumaça/borrão) */
+ul:hover li {
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(20px);
+}
+
+/* ===== DELAYS PROGRESSIVOS PARA EFEITO EM CASCATA ===== */
+/* Os delays progressivos criam o efeito de "fumaça em cascata", onde cada letra desaparece uma após a outra */
+
+/* nth-child(1) seleciona o primeiro item (letra 'S') - delay 0s (começa imediatamente) */
+ul:hover li:nth-child(1) {
+    transition-delay: 0s;
+}
+
+/* nth-child(2) seleciona o segundo item (letra 'M') - delay 0.4s */
+ul:hover li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+/* nth-child(3) seleciona o terceiro item (letra 'O') - delay 0.8s */
+ul:hover li:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+/* nth-child(4) seleciona o quarto item (letra 'K') - delay 1.2s */
+ul:hover li:nth-child(4) {
+    transition-delay: 1.2s;
+}
+
+/* nth-child(5) seleciona o quinto item (letra 'Y') - delay 1.6s */
+ul:hover li:nth-child(5) {
+    transition-delay: 1.6s;
+}
